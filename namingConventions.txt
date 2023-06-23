@@ -1,0 +1,11 @@
+Convention for project folders ->
+
+date_PROJECTCODE_Project Name Expanded
+YYYY_ALLCAPS
+2020_NBS
+
+Convention for project file names ->
+
+date_PROJECTCODE_fileName_version.extension #version control is optional
+YYMMDD_ShortName_camelCase_v1.extension |or| YYMMDD_Initials#_camelCase_v1.extension
+230620_ADMIN_namingConventions_v1.txt #fileName should reflect purpose of file, i.e., 'namingConventions' or 'report'.
