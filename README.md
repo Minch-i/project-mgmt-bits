@@ -15,7 +15,7 @@ _\04_Outputs_ | A folder for deliverable items or outputs of the project, i.e., 
 
 ## Instructions for _createProjects.bat_
 1. Create a "Projects" folder in which ever directory you prefer, i.e., _C:\Users\Minch\Projects_
-2. Download and move _createProjects.bat_ file and which ever program templates you are interested in (e.g., rTemplate.bat) to "_Projects_" directory
+2. Download and move _createProjects.bat_ file and which ever program templates you are interested in (e.g., _rTemplate.bat_) to "_Projects_" directory
 3. Click to operate the _createProjects.bat_ file and follow the cmd prompts
 NOTE: the files you pasted in "Projects" will be moved to a new directory _.\Projects\.projectsAdmin_. In the future, you can run the _createProjects.bat_ from there with no difference in operation.
 
