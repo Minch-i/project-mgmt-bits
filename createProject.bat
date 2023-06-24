@@ -4,6 +4,7 @@ setlocal
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo.
 echo Create project folder and populate with approrpiate folders
+echo ---Version 1.01---
 echo Authored by Minch ^| github.com/Minch-i ^| ^@Minch_me twitter
 echo.
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,6 +28,13 @@ echo.
 REM Enter project details
 set /p projectTag=Enter project tag (make it short, letters and/or numbers, capatilised):
 set /p projectTitle=Enter project title:
+echo Use title, limited to first 25 characters, in project name folder (Y/N)?:
+set /p useShortTitle=
+if /i "%useShortTitle:~0,1%"=="Y" (
+    set "useShortTitle=Yes"
+) else (
+    set "useShortTitle=No"
+)
 set /p projectAuthor=Enter project Author/s (lastName, intial): 
 set /p startDate=Enter start date (YYMM):
 
@@ -54,7 +62,12 @@ echo.
 REM Create projectsAdmin folder for easy management going forward
 mkdir "%defaultDirectory%\.projectsAdmin"
 
-set folderName=%startDate%_%projectTag%
+if "%useShortTitle%"=="Yes" (
+    set "folderName=%startDate%_%projectTag%_%projectTitle:~0,25%"
+) else (
+    set "folderName=%startDate%_%projectTag%"
+)
+set "folderName=%folderName: =-%"
 mkdir "%folderName%\01_Admin"
 mkdir "%folderName%\02_Research"
 mkdir "%folderName%\03_Work"
