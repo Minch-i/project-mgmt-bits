@@ -1,13 +1,13 @@
 @echo off
 setlocal
 
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo.
 echo Create project folder and populate with approrpiate folders
 echo ---Version 1.01---
-echo Authored by Minch ^| github.com/Minch-i ^| ^@Minch_me twitter
+echo Authored by Minch ^| github.com/Minch-i ^| ^@Minch_me twitter | ^minch.xyz
 echo.
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 REM Store the current directory path in a variable, as instructed this should be the "Projects" folder
 set "defaultDirectory=%CD%"
@@ -104,7 +104,7 @@ echo Description: %projectDescription% >> "01_Admin\README.txt"
 echo Created project README.txt file
 
 REM Move program/language specific templates
-move "%defaultDirectory%\rTemplate.bat" "%defaultDirectory%\.projectsAdmin\rTemplate.bat" 
+REM move "%defaultDirectory%\rTemplate.bat" "%defaultDirectory%\.projectsAdmin\rTemplate.bat" 
 move "%defaultDirectory%\namingConventions.txt" "%defaultDirectory%\.projectsAdmin\namingConventions.txt" 
 move "%defaultDirectory%\README.txt" "%defaultDirectory%\.projectsAdmin\README.txt"
 
